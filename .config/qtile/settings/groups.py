@@ -7,12 +7,12 @@ from re import compile
 # groups = [Group(i) for i in [" 󰈹  ", " 󰊢  ", "   ", "   ", "   ", "   ",]]
 
 groups = [
-    Group(" 󰈹  ", matches=[Match(wm_class=compile(r"^(firefox|brave-browser|google-chrome)$"))]),
+    Group(" 󰈹  ", matches=[Match(wm_class=compile(r"^(firefox|brave-browser|google-chrome|obsidian)$"))]),
     Group(" 󰊢  ", matches=[Match(wm_class=compile(r"^(code)$"))]),
     Group("   ", matches=[]),
     Group("   ", matches=[Match(wm_class=compile(r"^(postman|sqlitebrowser)"))]),
     Group("   ", matches=[Match(wm_class=compile(r"^(thunar|geeqie|vlc)"))]),
-    Group("   ", matches=[Match(wm_class=compile(r"^(obs|discord)"))]),
+    Group("   ", matches=[Match(wm_class=compile(r"^(obs$|discord)"))]),
 ]
 
 for i, group in enumerate(groups):
