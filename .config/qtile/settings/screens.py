@@ -17,7 +17,8 @@ def set_theme ():
             data = json.load(json_file)
     return json_theme, data
 
-set_theme()
+json_theme, data = set_theme()
+bar_placement = json_theme.get('position')
 
 def status_bar (widgets, data):
     return Screen(
@@ -27,9 +28,6 @@ def status_bar (widgets, data):
             opacity=0.99,
         )}
     )
-
-json_theme, data = set_theme()
-bar_placement = json_theme.get('position')
 
 screens = [status_bar(main_widgets, data)]
 
