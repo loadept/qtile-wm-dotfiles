@@ -9,12 +9,17 @@ return require('packer').startup(function(use)
 
   -- Themes
   use 'navarasu/onedark.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Fonts
   use 'nvim-tree/nvim-web-devicons'
 
+  -- Indent guides
+  use "lukas-reineke/indent-blankline.nvim"
   -- Auto-close parenthesis and brackets
   use "windwp/nvim-autopairs"
+  -- Comment lines
+  use "tpope/vim-commentary"
 
   -- Status bar
   use 'nvim-lualine/lualine.nvim'
@@ -24,11 +29,18 @@ return require('packer').startup(function(use)
   -- File tree
   use 'nvim-tree/nvim-tree.lua'
 
+  -- Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
+
   -- Git support
   use 'lewis6991/gitsigns.nvim'
 
   -- Syntax highlight
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/playground'
 
   -- LSP
@@ -37,14 +49,14 @@ return require('packer').startup(function(use)
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      { 'neovim/nvim-lspconfig' },           -- Required
+      { 'williamboman/mason.nvim' },         -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
+      { 'hrsh7th/nvim-cmp' },   -- Required
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'L3MON4D3/LuaSnip' },   -- Required
     }
   }
 end)

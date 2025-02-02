@@ -1,11 +1,6 @@
 -- Line numbers
 vim.opt.nu = true
-
--- Tabs
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.relativenumber = true
 
 -- Indentation
 vim.opt.smartindent = true
@@ -27,3 +22,9 @@ vim.opt.colorcolumn = "80"
 -- Don't load netrw because we use nvim-tree
 vim.g.load_netrw = 1
 vim.g.load_netrwPlugin = 1
+
+-- Clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Show a line on mouse position
+vim.opt.cursorline = true

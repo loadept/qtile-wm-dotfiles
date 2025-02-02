@@ -1,13 +1,16 @@
-require("onedark").setup {
-    style = "darker",
+require("catppuccin").setup({
+    flavour = "frappe"
+})
+--require("onedark").setup {
+--    style = "darker",
     -- transparent = "true",
-}
+--}
 
-local color = "onedark"
+local color = "catppuccin"
 vim.cmd.colorscheme(color)
 
 local function set_color(group, options)
-    vim.api.nvim_set_hl(0, group, options)
+  vim.api.nvim_set_hl(0, group, options)
 end
 
 if color == "onedark" then
