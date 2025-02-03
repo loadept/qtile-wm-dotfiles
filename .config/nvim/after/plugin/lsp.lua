@@ -7,18 +7,17 @@ lsp.ensure_installed({
   "zls",
   -- "clangd",
   "gopls",
-  -- "tsserver",
+  "ts_ls",
   "pyright",
   "lua_ls",
   "docker_compose_language_service",
   "dockerls",
   "html",
-  "volar",
   "tailwindcss",
   "bashls",
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   vim.api.nvim_create_user_command("ToggleInlineDiagnostics", function()
     local config = vim.diagnostic.config();
     vim.diagnostic.config {
