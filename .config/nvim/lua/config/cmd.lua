@@ -7,7 +7,7 @@ local function set_tabstop_based_on_extension()
   local ext = filename:match("^.+%.([^%.]+)$")
 
   local settings = {
-    go = { expandtab = false, tabstop = 8, softtabstop = 8, shiftwidth = 8 },
+    go = { expandtab = false, tabstop = 4, softtabstop = 4, shiftwidth = 4 },
     lua = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     js = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     ts = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
@@ -16,6 +16,7 @@ local function set_tabstop_based_on_extension()
     jsx = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     yaml = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     yml = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
+    html = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
   }
 
   local config = settings[ext] or { expandtab = true, tabstop = 4, softtabstop = 4, shiftwidth = 4 }
@@ -39,7 +40,7 @@ vim.api.nvim_create_user_command("Format", function()
     vim.notify("Error formatting with gofmt: " .. goimports_result, vim.log.levels.ERROR)
   end
 
-  local gofmt_result = vim.fn.system("gofmt -w " .. vim.fn.expand("%"))
+  local gofmt_result = vim.fn.system("gofmt -s -w " .. vim.fn.expand("%"))
 
   if vim.v.shell_error ~= 0 then
     vim.notify("Error formatting with gofmt: " .. gofmt_result, vim.log.levels.ERROR)

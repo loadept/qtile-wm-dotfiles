@@ -14,6 +14,7 @@ require'nvim-treesitter.configs'.setup {
         "go",
         "gomod",
         "gosum",
+        "html",
     },
     sync_install = false,
     auto_install = true,
