@@ -5,6 +5,9 @@ vim.opt.relativenumber = true
 -- Indentation
 vim.opt.smartindent = true
 
+-- Disable mouse
+vim.opt.mouse = ""
+
 -- Don't wrap text
 vim.opt.wrap = false
 

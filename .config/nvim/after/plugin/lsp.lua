@@ -15,6 +15,7 @@ lsp.ensure_installed({
   "html",
   "tailwindcss",
   "bashls",
+  "yamlls",
 })
 
 lsp.on_attach(function(_, bufnr)
