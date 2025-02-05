@@ -1,4 +1,4 @@
-from libqtile.layout import MonadTall, MonadWide, Max, Bsp
+from libqtile.layout import MonadTall, MonadWide, Max
 from libqtile.config import Match
 from libqtile import layout
 
@@ -11,7 +11,6 @@ configs = {
 layouts = [
     MonadTall(**configs),
     MonadWide(**configs),
-    Bsp(**configs),
     Max()
 ]
 
