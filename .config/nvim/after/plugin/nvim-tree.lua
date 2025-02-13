@@ -3,7 +3,8 @@ require("nvim-tree").setup({
     ignore = false
   },
   filters = {
-    dotfiles = false
+    dotfiles = false,
+    custom = { "^.git$", "^node_modules$", "^venv$" }
   },
   renderer = {
     indent_markers = {
