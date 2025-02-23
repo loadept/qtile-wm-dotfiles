@@ -7,6 +7,11 @@ require("nvim-tree").setup({
     custom = { "^.git$", "^node_modules$", "^venv$" }
   },
   renderer = {
+    icons = {
+      show = {
+        folder_arrow = false,
+      },
+    },
     indent_markers = {
       enable = false,
     }
