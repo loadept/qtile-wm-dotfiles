@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
         "rust",
         "zig",
         "html",
+        "css",
         "javascript",
         "typescript",
         "python",

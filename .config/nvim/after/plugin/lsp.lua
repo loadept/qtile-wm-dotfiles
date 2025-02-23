@@ -13,6 +13,7 @@ lsp.ensure_installed({
   "docker_compose_language_service",
   "dockerls",
   "html",
+  "cssls",
   "tailwindcss",
   "bashls",
   "yamlls",

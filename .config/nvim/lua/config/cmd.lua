@@ -17,6 +17,7 @@ local function set_tabstop_based_on_extension()
     yaml = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     yml = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
     html = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
+    css = { expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2 },
   }
 
   local config = settings[ext] or { expandtab = true, tabstop = 4, softtabstop = 4, shiftwidth = 4 }

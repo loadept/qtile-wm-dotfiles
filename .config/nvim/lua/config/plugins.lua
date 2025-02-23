@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   -- Themes
   use 'navarasu/onedark.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'Mofiqul/dracula.nvim'
 
   -- Fonts
   use 'nvim-tree/nvim-web-devicons'

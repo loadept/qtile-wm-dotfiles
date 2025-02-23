@@ -7,7 +7,7 @@ require("catppuccin").setup({
 -- transparent = "true",
 --}
 
-local color = "catppuccin"
+local color = "dracula"
 vim.cmd.colorscheme(color)
 
 local function set_color(group, options)
