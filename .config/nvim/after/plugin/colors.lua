@@ -2,12 +2,13 @@ require("catppuccin").setup({
   flavour = "frappe",
   transparent_background = true,
 })
---require("onedark").setup {
---    style = "darker",
--- transparent = "true",
---}
 
-local color = "dracula"
+require("onedark").setup {
+  style = "dark",
+  transparent = false,
+}
+
+local color = "onedark"
 vim.cmd.colorscheme(color)
 
 local function set_color(group, options)
@@ -18,7 +19,6 @@ if color == "onedark" then
   set_color("@operator", { fg = '#56B6C2' })
   set_color("@field", { fg = '#E06C75' })
   set_color("@string.escape", { fg = '#56B6C2' })
-  -- set_color("@punctuation.delimiter", { fg = '#56B6C2' })
   set_color("@constructor", { link = "@type" })
   set_color("@type.qualifier", { fg = '#c678dd' })
   set_color("@type.builtin", { link = "@type" })
