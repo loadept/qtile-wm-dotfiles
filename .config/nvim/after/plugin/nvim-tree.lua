@@ -11,6 +11,12 @@ require("nvim-tree").setup({
       show = {
         folder_arrow = false,
       },
+      git_placement = "after",
+      glyphs = {
+        git = {
+          ignored = "󰛑"
+        },
+      },
     },
     indent_markers = {
       enable = false,

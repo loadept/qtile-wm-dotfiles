@@ -15,6 +15,11 @@ require("nvim-web-devicons").setup {
       icon = "󰟓",
       color = "#ec407a",
       name = "GoSum",
-    }
+    },
+    ["nginx.conf"] = {
+      icon = "",
+      color = "#00ff23",
+      name = "NginxConf",
+    },
   },
 }
