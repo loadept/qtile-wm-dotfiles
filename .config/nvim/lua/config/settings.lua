@@ -31,3 +31,9 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Show a line on mouse position
 vim.opt.cursorline = true
+
+-- Show more lines
+vim.opt.scrolloff = 10
+
+-- Smooth
+vim.opt.smoothscroll = true

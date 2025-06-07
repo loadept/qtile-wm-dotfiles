@@ -5,7 +5,6 @@ local cmp = require("cmp")
 lsp.ensure_installed({
   "rust_analyzer",
   "zls",
-  -- "clangd",
   "gopls",
   "ts_ls",
   "pyright",
@@ -17,6 +16,7 @@ lsp.ensure_installed({
   "tailwindcss",
   "bashls",
   "yamlls",
+  "sqls",
 })
 
 lsp.on_attach(function(_, bufnr)

@@ -1,4 +1,8 @@
 require("nvim-tree").setup({
+  view = {
+    adaptive_size = true,
+    side = 'right'
+  },
   git = {
     ignore = false
   },

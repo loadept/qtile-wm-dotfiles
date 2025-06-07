@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'Mofiqul/dracula.nvim'
 
+  -- Hex colorizer
+  use 'norcalli/nvim-colorizer.lua'
+
   -- Fonts
   use 'nvim-tree/nvim-web-devicons'
 

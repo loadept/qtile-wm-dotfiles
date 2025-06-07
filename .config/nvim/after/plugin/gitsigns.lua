@@ -1,4 +1,10 @@
-require('gitsigns').setup()
+require('gitsigns').setup({
+  current_line_blame = true,
+  current_line_blame_opts = {
+    delay = 300
+  },
+  current_line_blame_formatter = '    <author>, <author_time:%R>   <summary>',
+})
 
 vim.keymap.set("n", "<leader>gp", ":Gitsigns prev_hunk<CR>")
 vim.keymap.set("n", "<leader>gn", ":Gitsigns next_hunk<CR>")
