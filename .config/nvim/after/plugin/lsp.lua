@@ -2,21 +2,23 @@ local lsp = require('lsp-zero').preset({})
 local lspconfig = require('lspconfig')
 local cmp = require("cmp")
 
-lsp.ensure_installed({
-  "rust_analyzer",
-  "zls",
-  "gopls",
-  "ts_ls",
-  "pyright",
-  "lua_ls",
-  "docker_compose_language_service",
-  "dockerls",
-  "html",
-  "cssls",
-  "tailwindcss",
-  "bashls",
-  "yamlls",
-  "sqls",
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    "rust_analyzer",
+    "zls",
+    "gopls",
+    "ts_ls",
+    "pyright",
+    "lua_ls",
+    "docker_compose_language_service",
+    "dockerls",
+    "html",
+    "cssls",
+    "tailwindcss",
+    "bashls",
+    "yamlls",
+    "sqls",
+  }
 })
 
 lsp.on_attach(function(_, bufnr)
