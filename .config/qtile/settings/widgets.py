@@ -116,7 +116,8 @@ def current_layout (data):
             foreground=data['widget_memory']['arrow']['background'],
             background=data['widget_layout']['arrow']['background'],
         ),
-        widget.CurrentLayoutIcon(
+        widget.CurrentLayout(
+            mode='icon',
             scale = 0.6,
             background=data['widget_layout']['arrow']['background'],
         ),
