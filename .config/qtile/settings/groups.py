@@ -1,3 +1,8 @@
+"""
+QTHEME CONFIGURATION
+Module for defining group configurations in Qtile.
+"""
+
 from libqtile.config import Group, Key, Match
 from libqtile.lazy import lazy
 from .keys import keys, mod

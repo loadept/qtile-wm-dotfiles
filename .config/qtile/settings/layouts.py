@@ -1,3 +1,8 @@
+"""
+QTHEME CONFIGURATION
+Module for defining layout configurations in Qtile.
+"""
+
 from libqtile.layout import MonadTall, MonadWide, Max
 from libqtile.config import Match
 from libqtile import layout

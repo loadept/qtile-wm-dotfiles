@@ -1,3 +1,8 @@
+"""
+QTHEME CONFIGURATION
+Module for defining mouse configurations in Qtile.
+"""
+
 from libqtile.config import Click, Drag
 from libqtile.lazy import lazy
 from .keys import mod

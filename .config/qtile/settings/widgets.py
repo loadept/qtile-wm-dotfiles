@@ -1,4 +1,10 @@
+"""
+QTHEME CONFIGURATION
+Module for defining widget configurations in Qtile.
+"""
+
 from libqtile import widget
+from libqtile.widget.base import _Widget
 
 
 widget_defaults = dict(
@@ -8,29 +14,29 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-def arch_logo (data):
+def arch_logo (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text='   ',
-            foreground=data["arch_logo"]["foreground"],
-            background=data['bar'],
+            foreground=config["arch_logo"]["foreground"],
+            background=config['bar'],
             fontsize=22,
         ),
         widget.Sep(
             foreground=["#f1ffff", "#f1ffff"],
-            background=data['bar']
+            background=config['bar']
         ),
         widget.Spacer(
             length=20,
-            background=data['bar'],
+            background=config['bar'],
         ),
     ]
 
-def groupbox (data):
+def groupbox (config) -> list[_Widget]:
     return [
         widget.GroupBox(
             foreground=["#f1ffff", "#f1ffff"],
-            background=data['bar'],
+            background=config['bar'],
             font='UbuntuMono Nerd Font',
             fontsize=20,
             margin_y=3,
@@ -42,152 +48,152 @@ def groupbox (data):
             inactive=["#525050", "#525050"],
             rounded=False,
             highlight_method='block',
-            this_current_screen_border=data['current_window']['this_current_screen_border'],
+            this_current_screen_border=config['current_window']['this_current_screen_border'],
             this_screen_border=["#5c5c5c", "#5c5c5c"],
-            other_current_screen_border=data['bar'],
-            other_screen_border=data['bar'],
+            other_current_screen_border=config['bar'],
+            other_screen_border=config['bar'],
         ),
         widget.WindowName(
-            foreground=data['window_name']['foreground'],
-            background=data['bar'],
+            foreground=config['window_name']['foreground'],
+            background=config['bar'],
         ),
         widget.Sep(
-            background=data['bar'],
-            foreground=data['bar'],
+            background=config['bar'],
+            foreground=config['bar'],
         ),
     ]
 
-def checkupdates (data):
+def checkupdates (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text="󱈙 ",
             padding=-10.5,
             fontsize=37,
-            foreground=data['bar'],
-            background=data['widget_update']['arrow']['background'],
+            foreground=config['bar'],
+            background=config['widget_update']['arrow']['background'],
         ),
         widget.TextBox(
             text=" ",
-            foreground=data['widget_update']['icon']['foreground'],
-            background=data['widget_update']['arrow']['background'],
+            foreground=config['widget_update']['icon']['foreground'],
+            background=config['widget_update']['arrow']['background'],
         ),
         widget.CheckUpdates(
-            foreground=data['widget_update']['checkupdates']['foreground'],
-            background=data['widget_update']['arrow']['background'],
+            foreground=config['widget_update']['checkupdates']['foreground'],
+            background=config['widget_update']['arrow']['background'],
 
             display_format='{updates}',
-            colour_have_updates=data['widget_update']['checkupdates']['foreground'],
+            colour_have_updates=config['widget_update']['checkupdates']['foreground'],
             custom_command='checkupdates',
             update_interval=1900,
         ),
     ]
 
-def memory_state (data):
+def memory_state (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text="󱈙 ",
             padding=-12,
             fontsize=37,
-            foreground=data['widget_update']['arrow']['background'],
-            background=data['widget_memory']['arrow']['background'],
+            foreground=config['widget_update']['arrow']['background'],
+            background=config['widget_memory']['arrow']['background'],
         ),
         widget.TextBox(
             text='󰍛 ',
-            foreground=data['widget_memory']['icon']['foreground'],
-            background=data['widget_memory']['arrow']['background'],
+            foreground=config['widget_memory']['icon']['foreground'],
+            background=config['widget_memory']['arrow']['background'],
         ),
         widget.Memory(
             format="{MemUsed:.0f}{mm} / {MemTotal:.0f}{mm}",
-            foreground=data['widget_memory']['memory']['foreground'],
-            background=data['widget_memory']['arrow']['background'],
+            foreground=config['widget_memory']['memory']['foreground'],
+            background=config['widget_memory']['arrow']['background'],
         ),
         widget.Sep(
-            foreground=data['widget_memory']['arrow']['background'],
-            background=data['widget_memory']['arrow']['background'],
+            foreground=config['widget_memory']['arrow']['background'],
+            background=config['widget_memory']['arrow']['background'],
         ),
     ]
 
-def current_layout (data):
+def current_layout (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text="󱈙 ",
             padding=-12,
             fontsize=37,
-            foreground=data['widget_memory']['arrow']['background'],
-            background=data['widget_layout']['arrow']['background'],
+            foreground=config['widget_memory']['arrow']['background'],
+            background=config['widget_layout']['arrow']['background'],
         ),
         widget.CurrentLayout(
             mode='icon',
             scale = 0.6,
-            background=data['widget_layout']['arrow']['background'],
+            background=config['widget_layout']['arrow']['background'],
         ),
         widget.CurrentLayout(
-            foreground=data['widget_layout']['layout']['foreground'],
-            background=data['widget_layout']['arrow']['background'],
+            foreground=config['widget_layout']['layout']['foreground'],
+            background=config['widget_layout']['arrow']['background'],
         ),
     ]
 
-def time_date (data):
+def time_date (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text="󱈙 ",
             padding=-12,
             fontsize=37,
-            foreground=data['widget_layout']['arrow']['background'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_layout']['arrow']['background'],
+            background=config['widget_clock']['arrow']['background'],
         ),
         widget.TextBox(
             text='󰃰 ',
-            foreground=data['widget_clock']['icon']['foreground'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_clock']['icon']['foreground'],
+            background=config['widget_clock']['arrow']['background'],
         ),
         widget.Clock(
             format="%d/%m/%Y ",
-            foreground=data['widget_clock']['clock']['foreground'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_clock']['clock']['foreground'],
+            background=config['widget_clock']['arrow']['background'],
         ),
         widget.Sep(
-            foreground=data['widget_clock']['sep']['foreground'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_clock']['sep']['foreground'],
+            background=config['widget_clock']['arrow']['background'],
         ),
         widget.Clock(
             format=" %I:%M %p",
-            foreground=data['widget_clock']['clock']['foreground'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_clock']['clock']['foreground'],
+            background=config['widget_clock']['arrow']['background'],
         ),
         widget.Sep(
-            foreground=data['widget_clock']['arrow']['background'],
-            background=data['widget_clock']['arrow']['background'],
+            foreground=config['widget_clock']['arrow']['background'],
+            background=config['widget_clock']['arrow']['background'],
         ),
     ]
 
-def system_tray (data):
+def system_tray (config) -> list[_Widget]:
     return [
         widget.TextBox(
             text="󱈙 ",
             padding=-11,
             fontsize=37,
-            foreground=data['widget_clock']['arrow']['background'],
-            background=data['bar'],
+            foreground=config['widget_clock']['arrow']['background'],
+            background=config['bar'],
         ),
         widget.Systray(
-            background=data['bar'],
+            background=config['bar'],
         ),
     ]
 
-def main_widgets (data: dict):
+def main_widgets (config: dict) -> list[_Widget]:
     return (
-        arch_logo(data) +
-        groupbox(data) +
-        checkupdates(data) +
-        memory_state(data) +
-        current_layout(data) +
-        time_date(data) +
-        system_tray(data)
+        arch_logo(config) +
+        groupbox(config) +
+        checkupdates(config) +
+        memory_state(config) +
+        current_layout(config) +
+        time_date(config) +
+        system_tray(config)
     )
 
-def secondary_widgets (data: dict):
+def secondary_widgets (config: dict) -> list[_Widget]:
     return (
-        arch_logo(data) +
-        groupbox(data)[::-1]
+        arch_logo(config) +
+        groupbox(config)[::-1]
     )

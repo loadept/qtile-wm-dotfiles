@@ -1,3 +1,8 @@
+"""
+QTHEME CONFIGURATION
+This configuration is managed and validated by QTHEME.
+"""
+
 import subprocess
 from os import path
 from libqtile import hook

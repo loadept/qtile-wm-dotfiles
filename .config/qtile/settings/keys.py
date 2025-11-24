@@ -1,3 +1,8 @@
+"""
+QTHEME CONFIGURATION
+Module for defining key configurations in Qtile.
+"""
+
 from libqtile.config import Key
 from libqtile.lazy import lazy
 
