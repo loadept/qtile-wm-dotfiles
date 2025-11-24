@@ -4,7 +4,7 @@
 cbatticon &
 
 #[Volume Icon]
-volumeicon &
+pasystray &
 
 #[Networking Applet]
 nm-applet &
