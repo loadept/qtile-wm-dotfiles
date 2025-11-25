@@ -1,10 +1,10 @@
 #!/bin/sh
 
+#[Volume Icon]
+pasystray -a &
+
 #[Battery Icon]
 cbatticon &
-
-#[Volume Icon]
-pasystray &
 
 #[Networking Applet]
 nm-applet &
